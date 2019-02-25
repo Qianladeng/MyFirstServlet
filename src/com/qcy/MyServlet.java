@@ -8,10 +8,12 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
  	
 
 @WebServlet("/MyServlet")
-public class MyServlet extends MyGenericServlet{
+public class MyServlet extends MyGenericServlet{ //或者Tomcat自带
 	
 			
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
@@ -40,5 +42,23 @@ public class MyServlet extends MyGenericServlet{
 		}
 	}
 	
+	
+//	extends HttpServlet(Tomcat)  简化MyHttpServlet
+
+//	protected void doPost(HttpServletRequest hreq, HttpServletResponse hres) {
+//			String user=hreq.getParameter("username(web)");
+//			String psw=hreq.getParameter("password(web)");
+//			
+//			if(user.equals(getServletConfig().getServletContext().getInitParameter("username(web)")&&psw.equals(getServletConfig().getServletContext().getInitParameter("password(web)")))) {
+//				hres.getWriter().println("Yes");
+//			}else{
+//				hres.getWriter().println("No");
+//			}
+//				
+//	}
+//
+//	protected void doGet(HttpServletRequest hreq, HttpServletResponse hres) {
+//		//...
+//	}
 
 }
