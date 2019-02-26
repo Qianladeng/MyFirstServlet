@@ -8,11 +8,11 @@
 </head>
 <body>
 		
-			<form action="/MyFirstServlet/MyServlet" method="get"><br/>
-				Account : <input type="text" name="username(web)"><br/><br/>
-				Password : <input type="password" name="password(web)"><br/><br/>
-				<input type="submit" value="提交">
-			
-		</form>
+	<form action="/MyFirstServlet/MyServlet" method="get"><br/>
+		Account : <input type="text" name="username(web)"><br/><br/>
+		Password : <input type="password" name="password(web)"><br/><br/>
+		<input type="submit" value="提交">
+	</form>
+	
 </body>
 </html>
